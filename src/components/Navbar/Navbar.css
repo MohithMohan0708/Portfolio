@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin:20px 170px;
+    margin:20px 150px;
 }
 .navbar img{
     width: 100px;
@@ -26,4 +26,17 @@
 }
 .nav-connect:hover{
     transform:scale(1.05);
+}
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.nav-menu li img{
+    display: flex;
+    margin: auto;
+}
+.anchor-link{
+    text-decoration: none;
+    color: white;
 }
