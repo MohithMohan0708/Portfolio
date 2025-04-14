@@ -31,11 +31,27 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    font-size: 22px;
 }
-.nav-menu li img{
-    display: flex;
-    margin: auto;
-}
+.active-link p {
+    position: relative;
+    background: linear-gradient(90deg, #0062ff, #61efff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .active-link p::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 6px;
+    background: linear-gradient(90deg, #61efff, #0062ff);
+    border-radius: 10px;
+  } 
 .anchor-link{
     text-decoration: none;
     color: white;
