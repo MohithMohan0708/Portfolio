@@ -1,6 +1,5 @@
 import React from 'react'
 import './Footer.css'
-import footer_logo from '../../assets/footer_logo.svg'
 import user_icon from '../../assets/user_icon.svg'
 import logo_gif from '../../assets/Mohith.gif'
 const Footer = () => {

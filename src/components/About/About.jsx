@@ -1,7 +1,5 @@
 import React from 'react'
 import './About.css'
-import theme_pattern from '../../assets/theme_pattern.svg'
-import profile_img from '../../assets/about_profile.svg'
 
 const About = () => {
     return (
@@ -15,24 +13,24 @@ const About = () => {
                         <div className="edu-branch">
                             <div className="edu-point">
                                 <h3>B.Tech in CSE (AI & ML)</h3>
-                                <p>Anits College, 2021 - 2025</p>
-                                <span>Current CGPA: 8.5</span>
+                                <p>Anits College, 2022 - 2026</p>
+                                <span>Current CGPA: 9.5</span>
                             </div>
                             <span className="edu-line"></span>
                         </div>
                         <div className="edu-branch">
                             <div className="edu-point">
                                 <h3>Intermediate (MPC)</h3>
-                                <p>Sri Chaitanya, 2019 - 2021</p>
-                                <span>Percentage: 94%</span>
+                                <p>Bhashyam Junior College, 2020 - 2022</p>
+                                <span>Percentage: 97%</span>
                             </div>
                             <span className="edu-line"></span>
                         </div>
                         <div className="edu-branch">
                             <div className="edu-point">
                                 <h3>SSC</h3>
-                                <p>St. Mary’s High School, 2018 - 2019</p>
-                                <span>Percentage: 95%</span>
+                                <p>Bhashyam School, 2019 - 2020</p>
+                                <span>Percentage: 98%</span>
                             </div>
                             <span className="edu-line"></span> {/* Add this line to show the dot for SSC */}
                         </div>
@@ -40,8 +38,8 @@ const About = () => {
                 </div>
                 <div className="about-right">
                     <div className="about-para">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam fuga molestias illo placeat incidunt culpa laudantium esse velit assumenda reiciendis consectetur, omnis quos atque voluptates id ut temporibus aut! Voluptatum!</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque incidunt commodi quis est accusamus earum, magnam nisi aut quidem aliquam dolore laboriosam qui soluta pariatur provident quisquam odit harum nulla!</p>
+                        <p>I’m a dedicated Full-Stack Developer with a passion for creating seamless digital experiences. With skills in front-end and back-end technologies like HTML, CSS, JavaScript, React, Node.js, and MongoDB, I enjoy building responsive, functional, and user-friendly web applications.</p>
+                        <p>What sets me apart is my sincerity and commitment. I believe in putting my heart and soul into every task, ensuring it’s done with care and precision. Loyal, trustworthy, and hardworking, I strive to deliver quality results that truly make a difference.</p>
                     </div>
                     <div className="about-skills">
                         <div className="about-skill">
@@ -69,19 +67,19 @@ const About = () => {
                 </a>
                 <div className="divider"></div>
 
-                <a href="https://www.linkedin.com/in/mohithmohan0708/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://www.linkedin.com/in/mohithmohankumar-kancharla/" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <i className="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
                 <div className="divider"></div>
 
-                <a href="https://leetcode.com/your_username" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://leetcode.com/u/MohithMohanKumarKancharla/" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <i className="fas fa-code"></i>
                     <span>LeetCode</span>
                 </a>
                 <div className="divider"></div>
 
-                <a href="https://www.hackerrank.com/your_username" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://www.hackerrank.com/dashboard" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <i className="fab fa-hackerrank"></i>
                     <span>HackerRank</span>
                 </a>

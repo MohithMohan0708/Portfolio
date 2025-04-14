@@ -1,7 +1,5 @@
 import React, { useRef, useState } from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo.svg'
-import underline from '../../assets/nav_underline.svg'
 import logo_gif from '../../assets/Mohith.gif'
 import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'

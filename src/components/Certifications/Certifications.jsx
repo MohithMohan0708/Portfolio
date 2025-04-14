@@ -1,31 +1,31 @@
 import React from 'react';
 import './Certifications.css';
-import theme_pattern from '../../assets/theme_pattern.svg';
+
 
 const certifications = [
     {
         title: "CS50's Intro to Programming with Python",
         org: "Harvard | edX",
         year: "2024",
-        link: "https://cs50.harvard.edu/certificates/your-certificate-id" // replace with actual
+        link: "https://certificates.cs50.io/958ca610-914e-4ddd-8bb7-39e06e2cfd4b.pdf?size=letter"
     },
     {
         title: "Google AI for Anyone",
         org: "Google | edX",
         year: "2024",
-        link: "https://credentials.edx.org/credentials/abcdef123456/" // replace with actual
+        link: "https://credentials.edx.org/credentials/abcdef123456/"
     },
     {
         title: "NPTEL Cloud Computing",
         org: "NPTEL | IIT",
         year: "2024",
-        link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL24CS24S1470000487" // example
+        link: "https://archive.nptel.ac.in/noc/B2C/candidate_login/candidate_scores.php?courseid=noc24-cs118"
     },
     {
         title: "NPTEL Programming in Java",
         org: "NPTEL | IIT",
         year: "2023",
-        link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL23CS24S1450000383"  // example
+        link: "https://archive.nptel.ac.in/noc/B2C/candidate_login/candidate_scores.php?courseid=noc24-cs43"
     }
 ];
 

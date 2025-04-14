@@ -40,14 +40,15 @@
 }
 .mywork-container img{
     box-sizing: border-box;
-    width: 350px;
-    height: 250px;
+    width: 400px;
+    height: 300px;
     transition: 0.3s;
     cursor: pointer;
+    border-radius: 10px;
 }
 .mywork-container img:hover{
     transform : scale(1.10);
-    border-radius: 10px;
+    border-radius: 20px;
     transition: 0.3s;
 }
 .mywork-showmore{
