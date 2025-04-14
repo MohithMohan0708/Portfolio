@@ -8,11 +8,35 @@ const About = () => {
         <div className='about' id='about'>
             <div className="about-title">
                 <h1>About me</h1>
-                <img src={theme_pattern} alt="" />
             </div>
             <div className="about-sections">
                 <div className="about-left">
-                    <img src={profile_img} alt="" />
+                    <div className="education-tree">
+                        <div className="edu-branch">
+                            <div className="edu-point">
+                                <h3>B.Tech in CSE (AI & ML)</h3>
+                                <p>Anits College, 2021 - 2025</p>
+                                <span>Current CGPA: 8.5</span>
+                            </div>
+                            <span className="edu-line"></span>
+                        </div>
+                        <div className="edu-branch">
+                            <div className="edu-point">
+                                <h3>Intermediate (MPC)</h3>
+                                <p>Sri Chaitanya, 2019 - 2021</p>
+                                <span>Percentage: 94%</span>
+                            </div>
+                            <span className="edu-line"></span>
+                        </div>
+                        <div className="edu-branch">
+                            <div className="edu-point">
+                                <h3>SSC</h3>
+                                <p>St. Mary’s High School, 2018 - 2019</p>
+                                <span>Percentage: 95%</span>
+                            </div>
+                            <span className="edu-line"></span> {/* Add this line to show the dot for SSC */}
+                        </div>
+                    </div>
                 </div>
                 <div className="about-right">
                     <div className="about-para">
@@ -38,21 +62,29 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="about-acheivements">
-                <div className="about-acheivement">
-                    <h1>10+</h1>
-                    <p>YEARS OF EXPERINCE</p>
-                </div>
-                <hr />
-                <div className="about-acheivement">
-                    <h1>90+</h1>
-                    <p>PROJECTS COMPLETED</p>
-                </div>
-                <hr />
-                <div className="about-acheivement">
-                    <h1>15+</h1>
-                    <p>HAPPY CLIENTS</p>
-                </div>
+            <div className="about-socials">
+                <a href="https://github.com/MohithMohan0708" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <i className="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <div className="divider"></div>
+
+                <a href="https://www.linkedin.com/in/mohithmohan0708/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <i className="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <div className="divider"></div>
+
+                <a href="https://leetcode.com/your_username" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <i className="fas fa-code"></i>
+                    <span>LeetCode</span>
+                </a>
+                <div className="divider"></div>
+
+                <a href="https://www.hackerrank.com/your_username" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <i className="fab fa-hackerrank"></i>
+                    <span>HackerRank</span>
+                </a>
             </div>
         </div>
     )

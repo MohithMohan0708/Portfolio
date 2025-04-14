@@ -8,7 +8,6 @@ const Mywork = () => {
     <div className='mywork' id='work'>
       <div className="mywork-title">
         <h1>My latest work</h1>
-        <img src={theme_pattern} alt="" />
       </div>
       <div className="mywork-container">
         {mywork_data.map((work,index)=>{

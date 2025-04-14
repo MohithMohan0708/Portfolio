@@ -6,20 +6,33 @@
     gap: 80px;
     margin: 60px 140px;
 }
-.mywork-title{
+.mywork-title {
     position: relative;
-}
-.mywork-title h1{
-    padding: 0px 30px;
+    margin-bottom:20px;
+    text-align: center;
+  }
+  
+.mywork-title h1 {
     font-size: 80px;
     font-weight: 600;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #0062ff 0%, #61efff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
-.mywork-title img{
+.mywork-title h1::after {
+    content: "";
     position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60%;
+    height: 6px;
+    background: linear-gradient(90deg, #61efff 0%, #0062ff 100%);
+    border-radius: 10px;
+}  
 .mywork-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
