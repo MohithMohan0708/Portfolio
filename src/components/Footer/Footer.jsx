@@ -2,12 +2,13 @@ import React from 'react'
 import './Footer.css'
 import footer_logo from '../../assets/footer_logo.svg'
 import user_icon from '../../assets/user_icon.svg'
+import logo_gif from '../../assets/Mohith.gif'
 const Footer = () => {
   return (
     <div className='footer'>
       <div className="footer-top">
         <div className="footer-top-left">
-            <img src={footer_logo} alt="" />
+            <img src={logo_gif} alt="" />
             <p>I am an enthusiastic full stack web developer. I have done many projects in this domain.</p>
         </div>
         <div className="footer-top-right">

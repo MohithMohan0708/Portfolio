@@ -6,20 +6,33 @@
     gap: 80px;
     margin: 70px 150px;
 }
-.contact-title{
+.contact-title {
     position: relative;
-}
-.contact-title h1{
-    padding: 0px 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+.contact-title h1 {
     font-size: 80px;
     font-weight: 600;
-}
-.contact-title img{
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #0062ff 0%, #61efff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+.contact-title h1::after {
+    content: "";
     position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-}
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60%;
+    height: 6px;
+    background: linear-gradient(90deg, #61efff 0%, #0062ff 100%);
+    border-radius: 10px;
+}  
 .contact-section{
     display: flex;
     gap: 150px;
