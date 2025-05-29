@@ -6,7 +6,7 @@ const Mywork = () => {
   return (
     <div className='mywork' id='work'>
       <div className="mywork-title">
-        <h1>My latest work</h1>
+        <h1>My Latest Work</h1>
       </div>
       <div className="mywork-container">
         {mywork_data.map((work, index) => (
