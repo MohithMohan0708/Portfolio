@@ -7,7 +7,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 const Hero = () => {
   return (
     <div className='hero' id='home'>
-      <img src={mohith_img} alt="Mohith" />
+      <div className="image-container">
+        <img src={mohith_img} alt="Mohith" />
+      </div>
       <h1><span>I'm Mohith Mohan Kumar Kancharla,</span> a passionate full stack developer based in India</h1>
       <p>I am passionate about solving problems, proficient in web development, and eager to expand my knowledge in machine learning.</p>
       <div className="hero-action">
