@@ -32,7 +32,7 @@ const About = () => {
                                 <p>Bhashyam School, 2019 - 2020</p>
                                 <span>Percentage: 98%</span>
                             </div>
-                            <span className="edu-line"></span> {/* Add this line to show the dot for SSC */}
+                            <span className="edu-line"></span>
                         </div>
                     </div>
                 </div>
@@ -66,19 +66,16 @@ const About = () => {
                     <span>GitHub</span>
                 </a>
                 <div className="divider"></div>
-
                 <a href="https://www.linkedin.com/in/mohithmohankumar-kancharla/" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <i className="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
                 <div className="divider"></div>
-
                 <a href="https://leetcode.com/u/MohithMohanKumarKancharla/" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <i className="fas fa-code"></i>
                     <span>LeetCode</span>
                 </a>
                 <div className="divider"></div>
-
                 <a href="https://www.hackerrank.com/dashboard" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <i className="fab fa-hackerrank"></i>
                     <span>HackerRank</span>

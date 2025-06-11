@@ -2,17 +2,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
-    margin: 100px 120px;
+    gap: 5rem;
+    margin: 6rem 8vw;
 }
 
 .certifications-title {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 3rem;
     text-align: center;
-} 
+}
+
 .certifications-title h1 {
-    font-size: 80px;
+    font-size: 4rem;
     font-weight: 600;
     position: relative;
     display: inline-block;
@@ -21,70 +22,108 @@
     -webkit-background-clip: text;
     color: transparent;
 }
-  
+
 .certifications-title h1::after {
     content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -10px;
+    bottom: -0.6rem;
     width: 60%;
-    height: 6px;
+    height: 0.4rem;
     background: linear-gradient(90deg, #61efff 0%, #0062ff 100%);
-    border-radius: 10px;
-} 
+    border-radius: 0.6rem;
+}
+
 .certifications-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 2.5rem;
     width: 100%;
 }
 
 .certification-card {
     background-color: #f0f4ff;
     border: 2px solid #61efff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     text-decoration: none;
     color: inherit;
 }
+
 .certification-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(0, 98, 255, 0.2);
+    box-shadow: 0 0.25rem 1rem rgba(0, 98, 255, 0.2);
 }
 
 .certification-card h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #1f3b8d;
 }
 
 .certification-card p {
-    font-size: 18px;
+    font-size: 1.1rem;
     color: #333;
-    margin: 8px 0;
+    margin: 0.5rem 0;
 }
 
 .certification-card span {
-    font-size: 16px;
+    font-size: 1rem;
     color: #888;
+}
+
+@media (max-width: 1024px) {
+    .certifications {
+        margin: 5rem 6vw;
+    }
+
+    .certifications-title h1 {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 768px) {
     .certifications {
-        margin: 40px 50px;
-        gap: 50px;
+        margin: 3rem 5vw;
+        gap: 3rem;
     }
 
     .certifications-title h1 {
-        font-size: 50px;
-        padding: 0;
+        font-size: 2.5rem;
     }
 
     .certifications-container {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certifications {
+        margin: 2rem 4vw;
+        gap: 2rem;
+    }
+
+    .certifications-title h1 {
+        font-size: 2rem;
+    }
+
+    .certification-card {
+        padding: 1rem;
+    }
+
+    .certification-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .certification-card p {
+        font-size: 1rem;
+    }
+
+    .certification-card span {
+        font-size: 0.9rem;
     }
 }

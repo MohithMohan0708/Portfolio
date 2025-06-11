@@ -1,7 +1,6 @@
 import React from 'react';
 import './Certifications.css';
 
-
 const certifications = [
     {
         title: "CS50's Intro to Programming with Python",

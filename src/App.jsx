@@ -11,14 +11,14 @@ import Certifications from './components/Certifications/Certifications'
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Certifications/>
-      <Services/>
-      <Mywork/>
-      <Contact/>
-      <Footer/>
+      <Navbar />
+      <Hero />
+      <About />
+      <Certifications />
+      <Services />
+      <Mywork />
+      <Contact />
+      <Footer />
     </div>
   )
 }
