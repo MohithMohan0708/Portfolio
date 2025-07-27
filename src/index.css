@@ -1,11 +1,333 @@
-*{
-  margin:0;
-  padding:0;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* CSS Variables for consistent theming */
+:root {
+  --primary-blue: #0062ff;
+  --secondary-cyan: #61efff;
+  --dark-bg: #0a0a0b;
+  --darker-bg: #050506;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --accent-glow: rgba(0, 98, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-body{
-  background-color: black;
-  height:100vh;
-  color:white;
-  font-family: 'outfit';
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--darker-bg);
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Animated background with gradient and patterns */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Main gradient background */
+    radial-gradient(circle at 20% 80%, rgba(0, 98, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(97, 239, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 98, 255, 0.05) 0%, transparent 50%),
+    /* Subtle dot pattern */
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 
+    100% 100%,
+    100% 100%, 
+    100% 100%,
+    20px 20px;
+  background-attachment: fixed;
+  pointer-events: none;
+  z-index: -2;
+  animation: backgroundShift 20s ease-in-out infinite;
+}
+
+/* Additional animated background layer */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Moving gradient orbs */
+    radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 98, 255, 0.08) 0%, transparent 30%),
+    /* Subtle grid pattern */
+    linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  background-size: 
+    800px 800px,
+    50px 50px,
+    50px 50px;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.7;
+  transition: background-position 0.3s ease-out;
+}
+
+/* Background animation */
+@keyframes backgroundShift {
+  0%, 100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%, 0 0;
+  }
+  25% {
+    background-position: 100% 0%, 0% 100%, 80% 20%, 5px 5px;
+  }
+  50% {
+    background-position: 100% 100%, 0% 0%, 20% 80%, 10px 10px;
+  }
+  75% {
+    background-position: 0% 100%, 100% 0%, 60% 40%, 15px 15px;
+  }
+}
+
+/* Mouse following effect */
+body.mouse-move::after {
+  background-position: 
+    calc(var(--mouse-x, 50%) * 1px - 400px) calc(var(--mouse-y, 50%) * 1px - 400px),
+    0 0,
+    0 0;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-cyan));
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--secondary-cyan), var(--primary-blue));
+  box-shadow: 0 0 10px rgba(97, 239, 255, 0.3);
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-blue) rgba(255, 255, 255, 0.05);
+}
+
+/* Selection styling */
+::selection {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-cyan));
+  color: white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-cyan));
+  color: white;
+  text-shadow: none;
+}
+
+/* Enhanced typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--secondary-cyan);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-blue);
+  text-shadow: 0 0 8px rgba(97, 239, 255, 0.3);
+}
+
+/* Button base styles */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input base styles */
+input, textarea, select {
+  font-family: inherit;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid var(--secondary-cyan);
+  outline-offset: 2px;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(97, 239, 255, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Utility classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-cyan));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.glass-effect {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(97, 239, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, 
+              transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Loading animation for better UX */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  body::before,
+  body::after {
+    background-size: 
+      150% 150%,
+      150% 150%, 
+      150% 150%,
+      15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+  
+  body::before,
+  body::after {
+    background-size: 
+      200% 200%,
+      200% 200%, 
+      200% 200%,
+      12px 12px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  body::before {
+    animation: none;
+  }
+  
+  body::after {
+    transition: none;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --text-muted: #cccccc;
+    --glass-border: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Dark mode support (if system preference changes) */
+@media (prefers-color-scheme: light) {
+  /* Keep dark theme regardless - comment out if you want to support light mode */
+}
+
+/* Print styles */
+@media print {
+  body::before,
+  body::after {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
 }
